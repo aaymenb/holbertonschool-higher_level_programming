@@ -1,5 +1,4 @@
 #!/usr/bin/python3i
-
 if __name__ == "__main__":
     from sys import argv
     int_sum = 0
