@@ -1,0 +1,1 @@
+In Python, structured data (or data structures) refers to types of data that allow you to store and organize multiple pieces of information efficiently. These structures facilitate the access, manipulation, and organization of data
