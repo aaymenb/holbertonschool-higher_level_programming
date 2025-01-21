@@ -1,16 +1,25 @@
 #!/usr/bin/python3
-""" among us """
+"""
+This function adds two numbers.
+"""
 
 
 def add_integer(a, b=98):
-    """ adds integers """
+    """
+    Adds two integers.
 
-    m = " must be an integer"
+    - a must be an integer or a float.
+    - b must be an integer or a float (default value is b = 98).
+    - If a or b is a float, it will be cast to an integer.
+    - Raises a TypeError if a or b is neither an integer nor a float.
+    """
 
-    if type(a) not in [int, float]:
-        raise TypeError("a" + m)
-    if type(b) not in [int, float]:
-        raise TypeError("b" + m)
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
 
-    va, vb = int(a), int(b)
-    return va + vb
+    a = int(a)
+    b = int(b)
+
+    return a + b
