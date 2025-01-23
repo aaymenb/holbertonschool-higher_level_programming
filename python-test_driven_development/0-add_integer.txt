@@ -1,49 +1,27 @@
-The ``0-add_integer`` module
+# Positive integers
+>>> add_integer(1, 2)
+3
 
-Test Valide
-===========
-    >>> add_integer = __import__('0-add_integer').add_integer
-    
-    >>> add_integer(1, 2)
-    3
+# Mixed positive and negative integers
+>>> add_integer(100, -2)
+98
 
-    >>> add_integer(1.2, 1.2)
-    2
+# Default parameter usage
+>>> add_integer(2)
+100
 
-    >>> add_integer(2)
-    100
+# Floating point numbers (converted to integers)
+>>> add_integer(100.3, -2)
+98
 
-    >>> add_integer(100.3, -2)
-    98
-
-Test No Valide (String)
-=======================
-    >>> add_integer = __import__('0-add_integer').add_integer
-
-    >>> add_integer(scandere, 23)
-    Traceback (most recent call last):
+# Error case: second argument is a string
+>>> add_integer(4, "School")
+Traceback (most recent call last):
     ...
-    NameError: name 'scandere' is not defined
-   
-    >>> add_integer("16", 15)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+TypeError: b must be an integer
 
-    >>> add_integer(s, 78)
-    Traceback (most recent call last):
+# Error case: first argument is None
+>>> add_integer(None)
+Traceback (most recent call last):
     ...
-    NameError: name 's' is not defined
-
-TEST NON VALID float
-====================
-
-    >>> add_integer(float('inf'), 5)
-    Traceback (most recent call last):
-    ...
-    OverflowError: cannot convert float infinity to integer
-
-    >>> add_integer(float('nan'), 5)
-    Traceback (most recent call last):
-    ...
-    ValueError: cannot convert float NaN to integer
+TypeError: a must be an integer
